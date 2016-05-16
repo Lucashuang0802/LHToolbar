@@ -1,0 +1,6 @@
+framework module LHToolbar {
+  umbrella header "LHToolbar-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,53 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/lucas/LHToolbar/Example/build/Debug-iphonesimulator/LHToolbar.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "LHToolbar-Swift.h",
+          'external-contents': "/Users/lucas/LHToolbar/Example/build/Debug-iphonesimulator/LHToolbar.framework/Headers/LHToolbar-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "LHToolbar-umbrella.h",
+          'external-contents': "/Users/lucas/LHToolbar/Example/Pods/Target Support Files/LHToolbar/LHToolbar-umbrella.h"
+        },
+        {
+          'type': 'file',
+          'name': "LHToolbar.h",
+          'external-contents': "/Users/lucas/LHToolbar/LHToolbar/Toolbar/LHToolbar.h"
+        },
+        {
+          'type': 'file',
+          'name': "LHToolbarContainerView.h",
+          'external-contents': "/Users/lucas/LHToolbar/LHToolbar/Toolbar/LHToolbarContainerView.h"
+        },
+        {
+          'type': 'file',
+          'name': "LHToolbarContainerViewItem.h",
+          'external-contents': "/Users/lucas/LHToolbar/LHToolbar/Toolbar/LHToolbarContainerViewItem.h"
+        },
+        {
+          'type': 'file',
+          'name': "UIView+AutoLayoutHelper.h",
+          'external-contents': "/Users/lucas/LHToolbar/LHToolbar/Toolbar/Categories/UIView+AutoLayoutHelper.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/lucas/LHToolbar/Example/build/Debug-iphonesimulator/LHToolbar.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/lucas/LHToolbar/Example/build/Pods.build/Debug-iphonesimulator/LHToolbar.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

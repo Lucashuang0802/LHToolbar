@@ -8,6 +8,7 @@
 
 // https://github.com/kiwi-bdd/Kiwi
 
+#import <Kiwi/Kiwi.h>
 #import "LHToolbar.h"
 
 SPEC_BEGIN(InitialTests)
@@ -30,8 +31,6 @@ context(@"Initialization of LHToolbar", ^(){
             
             LHToolbar *toolbar = [[LHToolbar alloc] initWithNumberOfItems:0];
             [[toolbar should] beNil];
-            
-           
         });
         
         it(@"should not initialize with negetive number of items", ^(){

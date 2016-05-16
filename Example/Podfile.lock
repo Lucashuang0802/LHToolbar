@@ -1,0 +1,17 @@
+PODS:
+  - Kiwi (2.4.0)
+  - LHToolbar (1.0.0)
+
+DEPENDENCIES:
+  - Kiwi
+  - LHToolbar (from `../`)
+
+EXTERNAL SOURCES:
+  LHToolbar:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
+  LHToolbar: 44c7a3efcd0d154d1305df1e0283ad5d51bcbe7c
+
+COCOAPODS: 0.39.0

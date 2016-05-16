@@ -1,0 +1,9 @@
+use_frameworks!
+
+target 'LHToolbar_Example' do
+  pod 'LHToolbar', :path => '../'
+
+  target 'LHToolbar_Tests' do
+    pod 'Kiwi'
+  end
+end

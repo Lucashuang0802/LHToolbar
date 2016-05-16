@@ -1,0 +1,6 @@
+framework module Pods_LHToolbar_Example_LHToolbar_Tests {
+  umbrella header "Pods-LHToolbar_Example-LHToolbar_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

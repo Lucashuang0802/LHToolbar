@@ -51,10 +51,10 @@ static CGFloat const gap = 2.0f;
     [eraseButton setBackgroundColor:[UIColor blackColor]];
     eraseButton.frame = CGRectMake(gap, gap, CGRectGetWidth(mainScreenBounds) / 4 - gap * 2, toolbarHeight - gap * 2);
 
-    [toolbar addContentView:annotateButton atIndex:0];
-    [toolbar addContentView:textButton atIndex:1];
-    [toolbar addContentView:screenshotButton atIndex:2];
-    [toolbar addContentView:eraseButton atIndex:3];
+    [toolbar setContentView:annotateButton atIndex:0];
+    [toolbar setContentView:textButton atIndex:1];
+    [toolbar setContentView:screenshotButton atIndex:2];
+    [toolbar setContentView:eraseButton atIndex:3];
     [self.view addSubview:toolbar];
 }
 
@@ -83,7 +83,7 @@ static CGFloat const gap = 2.0f;
         [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
         button.frame = CGRectMake(gap, gap, (CGRectGetWidth(mainScreenBounds) - offset) / 9.0 - gap * 2, colorToolbarHeight - gap * 2);
         button.layer.cornerRadius = colorToolbarHeight / 2.0f;
-        [toolbar addContentView:button atIndex:i -  1];
+        [toolbar setContentView:button atIndex:i -  1];
     }
     [toolbar reloadToolbar];
 }

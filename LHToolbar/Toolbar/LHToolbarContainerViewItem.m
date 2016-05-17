@@ -59,6 +59,8 @@
 }
 
 - (instancetype)initWithPercentageOfScreenWidth:(CGFloat)percentageOfScreenWidth {
+    if (percentageOfScreenWidth <= 0) return nil;
+    
     if (self = [super init]) {
         self.backgroundColor = [UIColor clearColor];
         self.translatesAutoresizingMaskIntoConstraints = NO;

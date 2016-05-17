@@ -19,10 +19,13 @@
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
-		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		72DD04A103B13B8FBD0F39B8 /* Pods_LHToolbar_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA68ECDCCAB56E46902E2C2 /* Pods_LHToolbar_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		8B9ED8DB256EC7C9F7BEC61C /* Pods_LHToolbar_Example_LHToolbar_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14292D669054BFD8C67ACBC /* Pods_LHToolbar_Example_LHToolbar_Tests.framework */; };
+		A067B2A51CEBBBCB0099F876 /* LHToolbarContainerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A067B2A41CEBBBCB0099F876 /* LHToolbarContainerViewTests.m */; };
+		A067B2A71CEBC1870099F876 /* LHToolbarContainerViewItemTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A067B2A61CEBC1870099F876 /* LHToolbarContainerViewItemTests.m */; };
+		A067B2A91CEBCB630099F876 /* UIViewCategoriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A067B2A81CEBCB630099F876 /* UIViewCategoriesTests.m */; };
+		A0705AEE1CEAF65800386FE4 /* LHToolbarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0705AED1CEAF65800386FE4 /* LHToolbarTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,10 +57,13 @@
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		6B87421713A54F03DCED4782 /* Pods-LHToolbar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHToolbar_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-LHToolbar_Example/Pods-LHToolbar_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A067B2A41CEBBBCB0099F876 /* LHToolbarContainerViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHToolbarContainerViewTests.m; sourceTree = "<group>"; };
+		A067B2A61CEBC1870099F876 /* LHToolbarContainerViewItemTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHToolbarContainerViewItemTests.m; sourceTree = "<group>"; };
+		A067B2A81CEBCB630099F876 /* UIViewCategoriesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewCategoriesTests.m; sourceTree = "<group>"; };
+		A0705AED1CEAF65800386FE4 /* LHToolbarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHToolbarTests.m; sourceTree = "<group>"; };
 		AAA68ECDCCAB56E46902E2C2 /* Pods_LHToolbar_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LHToolbar_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14292D669054BFD8C67ACBC /* Pods_LHToolbar_Example_LHToolbar_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LHToolbar_Example_LHToolbar_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B71D21A68CB868883B497DC6 /* Pods-LHToolbar_Example-LHToolbar_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHToolbar_Example-LHToolbar_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LHToolbar_Example-LHToolbar_Tests/Pods-LHToolbar_Example-LHToolbar_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -167,8 +173,11 @@
 		6003F5B5195388D20070C39A /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				6003F5BB195388D20070C39A /* Tests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
+				A0705AED1CEAF65800386FE4 /* LHToolbarTests.m */,
+				A067B2A41CEBBBCB0099F876 /* LHToolbarContainerViewTests.m */,
+				A067B2A61CEBC1870099F876 /* LHToolbarContainerViewItemTests.m */,
+				A067B2A81CEBCB630099F876 /* UIViewCategoriesTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -400,7 +409,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5BC195388D20070C39A /* Tests.m in Sources */,
+				A067B2A91CEBCB630099F876 /* UIViewCategoriesTests.m in Sources */,
+				A067B2A51CEBBBCB0099F876 /* LHToolbarContainerViewTests.m in Sources */,
+				A067B2A71CEBC1870099F876 /* LHToolbarContainerViewItemTests.m in Sources */,
+				A0705AEE1CEAF65800386FE4 /* LHToolbarTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +567,13 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Kiwi\"",
+					"-framework",
+					"\"LHToolbar\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LHToolbar_Example.app/LHToolbar_Example";
@@ -574,6 +593,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Kiwi\"",
+					"-framework",
+					"\"LHToolbar\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LHToolbar_Example.app/LHToolbar_Example";

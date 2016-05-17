@@ -10,11 +10,19 @@
 
 @interface LHToolbar : UIView
 
+@property (readonly, nonatomic) NSInteger numberOfItems;
+
 - (instancetype)initWithNumberOfItems:(NSInteger)numberOfItems;
 
 - (void)reloadToolbar;
 
-- (void)addContentView:(UIView *)contentView
+- (void)setContentView:(UIView *)contentView
                atIndex:(NSInteger)index;
+
+- (UIView *)contentViewAtIndex:(NSInteger)index;
+
+- (NSInteger)indexOfContentView:(UIView *)contentView;
+
+- (BOOL)containedContentView:(UIView *)contentView;
 
 @end

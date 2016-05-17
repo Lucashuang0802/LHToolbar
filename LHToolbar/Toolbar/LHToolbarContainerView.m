@@ -48,8 +48,10 @@
     
     for (NSInteger i = 0; i < self.contentViews.count; i++) {
         UIView *contentView = self.contentViews[i];
-        UIView *view = self.subviews[i];
-        [view addSubview:contentView];
+        if (![contentView isEqual:[NSNull null]]) {
+            UIView *view = self.subviews[i];
+            [view addSubview:contentView];
+        }
     }
 }
 

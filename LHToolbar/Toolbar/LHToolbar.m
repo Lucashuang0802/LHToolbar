@@ -15,6 +15,11 @@
 @end
 
 @implementation LHToolbar
+@synthesize numberOfItems = _numberOfItems;
+
+- (NSInteger)numberOfItems {
+    return _numberOfItems;
+}
 
 - (void)setNumberOfItems:(NSInteger)numberOfItems {
     if (numberOfItems <= 0) {
@@ -35,6 +40,9 @@
         [self setupToolbarStyle];
         
         _containerView = [[LHToolbarContainerView alloc] init];
+        for (NSUInteger i = 0; i < numberOfItems; i++) {
+            [_containerView.contentViews addObject:[NSNull null]];
+        }
         _containerView.dataSource = self;
         [self addSubview:self.containerView];
     }
@@ -54,9 +62,31 @@
     [self.containerView reloadToolbarContainerView];
 }
 
-- (void)addContentView:(UIView *)contentView atIndex:(NSInteger)index {
+- (void)setContentView:(UIView *)contentView atIndex:(NSInteger)index {
     if (index >= self.numberOfItems) return;
-    [self.containerView.contentViews insertObject:contentView atIndex:index];
+    
+    [self.containerView.contentViews setObject:contentView atIndexedSubscript:index];
+}
+
+- (UIView *)contentViewAtIndex:(NSInteger)index {
+    
+    if (index >= self.numberOfItems) return nil;
+    
+    id contentView = self.containerView.contentViews[index];
+    if ([contentView isEqual:[NSNull null]]) {
+        return nil;
+    }
+    return contentView;
+}
+
+- (NSInteger)indexOfContentView:(UIView *)contentView {
+    if (![self containedContentView:contentView]) return -1;
+    return [self.containerView.contentViews indexOfObject:contentView];
+}
+
+- (BOOL)containedContentView:(UIView *)contentView {
+    if (!contentView || [contentView isEqual:[NSNull null]]) return NO;
+    return [self.containerView.contentViews containsObject:contentView];
 }
 
 #pragma mark - LHToolbarContainerViewDataSource

@@ -1,0 +1,6 @@
+coverage:
+  ignore:
+    - LHToolbarDemoCocoaPodsTest/*
+    - LHToolbarTests/*
+    - LHToolbarDemo/*
+    - Pods/*

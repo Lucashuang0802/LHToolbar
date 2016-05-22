@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="opn-Fk-rxg">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EJT-Op-tbs">
+            <objects>
+                <viewController id="opn-Fk-rxg" customClass="LHViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P1u-eV-JO2"/>
+                        <viewControllerLayoutGuide type="bottom" id="uKD-Nv-1Lf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YhV-7q-hVR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGL-Ma-SHs">
+                                <rect key="frame" x="234" y="28" width="132" height="30"/>
+                                <state key="normal" title="addItemToColorBar"/>
+                                <connections>
+                                    <action selector="addItemToColorBarPressed:" destination="opn-Fk-rxg" eventType="touchUpInside" id="KHv-ay-YaJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgo-mi-jBf">
+                                <rect key="frame" x="238.5" y="104" width="123" height="30"/>
+                                <state key="normal" title="addItemToToolBar"/>
+                                <connections>
+                                    <action selector="addItemToToolBarPressed:" destination="opn-Fk-rxg" eventType="touchUpInside" id="v12-KJ-AgZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-vX-bJT">
+                                <rect key="frame" x="221.5" y="66" width="157" height="30"/>
+                                <state key="normal" title="removeItemToColorBar"/>
+                                <connections>
+                                    <action selector="removeItemToColorBarPressed:" destination="opn-Fk-rxg" eventType="touchUpInside" id="abW-0J-mYa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3M-W0-zqG">
+                                <rect key="frame" x="226.5" y="142" width="148" height="30"/>
+                                <state key="normal" title="removeItemToToolBar"/>
+                                <connections>
+                                    <action selector="removeItemToToolBarPressed:" destination="opn-Fk-rxg" eventType="touchUpInside" id="LzO-Uk-jhU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6zi-vX-bJT" firstAttribute="top" secondItem="pGL-Ma-SHs" secondAttribute="bottom" constant="8" id="4oU-8S-HNY"/>
+                            <constraint firstItem="pGL-Ma-SHs" firstAttribute="top" secondItem="P1u-eV-JO2" secondAttribute="bottom" constant="8" id="5LE-ce-4fl"/>
+                            <constraint firstItem="pGL-Ma-SHs" firstAttribute="centerX" secondItem="YhV-7q-hVR" secondAttribute="centerX" id="5gn-vv-FTq"/>
+                            <constraint firstItem="G3M-W0-zqG" firstAttribute="centerX" secondItem="YhV-7q-hVR" secondAttribute="centerX" id="66o-Sk-jTx"/>
+                            <constraint firstItem="Mgo-mi-jBf" firstAttribute="centerX" secondItem="YhV-7q-hVR" secondAttribute="centerX" id="BhL-fn-y3k"/>
+                            <constraint firstItem="Mgo-mi-jBf" firstAttribute="top" secondItem="6zi-vX-bJT" secondAttribute="bottom" constant="8" id="GVu-Hs-Dfm"/>
+                            <constraint firstItem="G3M-W0-zqG" firstAttribute="top" secondItem="Mgo-mi-jBf" secondAttribute="bottom" constant="8" id="VfL-2s-qAZ"/>
+                            <constraint firstItem="6zi-vX-bJT" firstAttribute="centerX" secondItem="YhV-7q-hVR" secondAttribute="centerX" id="i1K-9i-Lmm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CeC-OD-DYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="433"/>
+        </scene>
+    </scenes>
+</document>

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "LHToolbar"
-  s.version          = "1.1.0-beta"
+  s.version          = "1.2.0-beta"
   s.summary          = "An alternative way to create a tool bar for iOS applications."
 
 # This description is used to generate tags and improve search results.
@@ -28,13 +28,13 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'LHToolbar/Toolbar/**/*'
+  s.source_files = 'LHToolbar/**/*'
   
   # s.resource_bundles = {
   #   'LHToolbar' => ['LHToolbar/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'LHToolbar/LHToolbar.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

@@ -1,1 +1,0 @@
- const unsigned char Pods_LHToolbar_ExampleVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Pods_LHToolbar_Example  PROJECT:Pods-1" "\n"; const double Pods_LHToolbar_ExampleVersionNumber __attribute__ ((used)) = (double)1.;

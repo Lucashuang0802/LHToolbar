@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/Lucashuang0802/LHToolbar.svg?branch=master)](https://travis-ci.org/Lucashuang0802/LHToolbar)
 [![Version](https://img.shields.io/cocoapods/v/LHToolbar.svg?style=flat)](http://cocoapods.org/pods/LHToolbar)
 [![License](https://img.shields.io/cocoapods/l/LHToolbar.svg?style=flat)](http://cocoapods.org/pods/LHToolbar)
+[![codecov](https://codecov.io/gh/Lucashuang0802/LHToolbar/branch/master/graph/badge.svg)](https://codecov.io/gh/Lucashuang0802/LHToolbar)
 [![Platform](https://img.shields.io/cocoapods/p/LHToolbar.svg?style=flat)](http://cocoapods.org/pods/LHToolbar)
 
 ## Description

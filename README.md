@@ -15,6 +15,7 @@ LHToolbar is an alternative way to create a toolbar in iOS applications. Tool ba
 ## Upcoming Feature
 * Vertical AutoLayout based toolbar container
 * Support of scrollable content
+* Support different size of content view item
 
 ## An example to use
 ````objc

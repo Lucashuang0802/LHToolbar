@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "LHToolbar"
-  s.version          = "1.0.0-beta"
+  s.version          = "1.1.0-beta"
   s.summary          = "An alternative way to create a tool bar for iOS applications."
 
 # This description is used to generate tags and improve search results.

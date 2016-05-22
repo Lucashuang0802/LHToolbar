@@ -25,4 +25,13 @@
 
 - (BOOL)containedContentView:(UIView *)contentView;
 
+- (void)addContentView:(UIView *)contentView;
+
+- (void)insertContentView:(UIView *)contentView
+                  atIndex:(NSInteger)index;
+
+- (void)removeLastContentView;
+
+- (void)removeContentViewAtIndex:(NSInteger)index;
+
 @end

@@ -10,7 +10,6 @@
 #import "LHToolbar.h"
 
 SPEC_BEGIN(InitialLHToolbarTests)
-
 context(@"Initialization of LHToolbar", ^(){
     describe(@"An instance of LHToolbar", ^(){
         it(@"should initialize", ^(){
@@ -30,7 +29,7 @@ context(@"Initialization of LHToolbar", ^(){
         it(@"should not initialize with zero item ", ^(){
             
             LHToolbar *toolbar = [[LHToolbar alloc] initWithNumberOfItems:0];
-            [[toolbar should] beNil];
+            [[toolbar shouldNot] beNil];
             [[theValue(toolbar.numberOfItems) should] equal:theValue(0)];
         });
         
@@ -42,29 +41,18 @@ context(@"Initialization of LHToolbar", ^(){
         });
     });
 });
-
 SPEC_END
 
-SPEC_BEGIN(AdditionContentViewToolbarTests)
-
-LHToolbar *toolbar = [[LHToolbar alloc] initWithNumberOfItems:2];
-context(@"Addition of content view in LHToolbar", ^(){
+SPEC_BEGIN(AccessingContentViewToolbarTests)
+context(@"Accessing content view in LHToolbar", ^(){
     
+    LHToolbar *toolbar = [[LHToolbar alloc] initWithNumberOfItems:2];
+    UIView *view1 = [[UIView alloc] initWithFrame:CGRectZero];
+    UIView *view2 = [[UIView alloc] init];
+    
+    [toolbar setContentView:view1 atIndex:1];
+    [toolbar setContentView:view2 atIndex:2];
     describe(@"An instance of LHToolbar", ^(){
-        
-        UIView *view1 = [[UIView alloc] initWithFrame:CGRectZero];
-        UIView *view2 = [[UIView alloc] init];
-        
-        it(@"should add view1 successfully at index within the range", ^(){
-
-            [toolbar setContentView:view1 atIndex: 1];
-        });
-        
-        it(@"should not add view2 successfully at index out of the range", ^(){
-
-            [toolbar setContentView:view2 atIndex: 2];
-            [[theValue([toolbar containedContentView:view2]) shouldNot] equal:theValue(YES)];
-        });
         
         it(@"should contain view1", ^(){
             [[theValue([toolbar containedContentView:view1]) should] equal:theValue(YES)];
@@ -93,5 +81,123 @@ context(@"Addition of content view in LHToolbar", ^(){
         });
     });
 });
+SPEC_END
 
+SPEC_BEGIN(AddingContentViewToolbarTests)
+context(@"Adding content view in LHToolbar", ^(){
+    
+    LHToolbar *toolbar = [[LHToolbar alloc] initWithNumberOfItems:0];
+    describe(@"An instance of LHToolbar", ^(){
+        it(@"should insert the view at given index", ^(){
+            
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            [toolbar insertContentView:button atIndex:0];
+            
+            [[[toolbar contentViewAtIndex:0] should] equal:button];
+            [[theValue(toolbar.numberOfItems) should] equal:theValue(1)];
+        });
+        
+        it(@"shoud not insert the view at given index out of the range", ^(){
+            
+            UIButton *button1 = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            [toolbar insertContentView:button1 atIndex:5];
+            UIButton *button2 = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            [toolbar insertContentView:button2 atIndex:-1];
+            
+            [[theValue(toolbar.numberOfItems) should] equal:theValue(1)];
+            [[theValue([toolbar containedContentView:button1]) should] equal:theValue(NO)];
+            [[theValue([toolbar containedContentView:button2]) should] equal:theValue(NO)];
+        });
+        
+        it(@"should not insert the nil view", ^(){
+            [toolbar insertContentView:nil atIndex:1];
+            [[theValue(toolbar.numberOfItems) should] equal:theValue(1)];
+        });
+        
+        it(@"should add the view from the end", ^(){
+            
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+            [toolbar addContentView:button];
+            
+            [[theValue(toolbar.numberOfItems) should] equal:theValue(2)];
+            [[[toolbar contentViewAtIndex:toolbar.numberOfItems - 1] should] equal:button];
+        });
+        
+        it(@"should not add nil from the end", ^(){
+            [toolbar addContentView:nil];
+            [[theValue(toolbar.numberOfItems) should] equal:theValue(2)];
+        });
+    });
+});
+SPEC_END
+
+SPEC_BEGIN(RemovingContentViewToolbarTests)
+context(@"Removing content view in LHToolbar", ^(){
+    
+    LHToolbar *toolbar = [[LHToolbar alloc] initWithNumberOfItems:0];
+    UIView *view1 = [[UIView alloc] initWithFrame:CGRectZero];
+    UIView *view2 = [[UIView alloc] initWithFrame:CGRectZero];
+    [toolbar addContentView:view1];
+    [toolbar addContentView:view2];
+    
+    describe(@"An instance of LHToolbar", ^(){
+        
+        it(@"should remove the view at given index", ^(){
+            [toolbar removeContentViewAtIndex:0];
+            [[[toolbar contentViewAtIndex:0] should] equal:view2];
+            [[theValue(toolbar.numberOfItems) should] equal:theValue(1)];
+        });
+        
+        it(@"shoud not remove the view at given index out of the range", ^(){
+            
+            [toolbar removeContentViewAtIndex:2];
+            [[[toolbar contentViewAtIndex:0] should] equal:view2];
+            [[theValue(toolbar.numberOfItems) should] equal:theValue(1)];
+        });
+        
+        it(@"should remove the view from the end ", ^(){
+            
+            [toolbar removeLastContentView];
+            [[theValue(toolbar.numberOfItems) should] equal:theValue(0)];
+        });
+        
+        it(@"should remove not the view from the end ", ^(){
+            
+            [toolbar removeLastContentView];
+            [[theValue(toolbar.numberOfItems) should] equal:theValue(0)];
+        });
+    });
+});
+SPEC_END
+
+SPEC_BEGIN(SettingContentViewToolbarTests)
+context(@"Setting content view in LHToolbar", ^(){
+    
+    LHToolbar *toolbar = [[LHToolbar alloc] initWithNumberOfItems:0];
+    UIView *view1 = [[UIView alloc] initWithFrame:CGRectZero];
+    UIView *view2 = [[UIView alloc] initWithFrame:CGRectZero];
+    [toolbar addContentView:view1];
+    [toolbar addContentView:view2];
+    
+    describe(@"An instance of LHToolbar", ^(){
+        
+        it(@"should set the new view at given index", ^(){
+            
+            UIView *view3 = [[UIView alloc] initWithFrame:CGRectZero];
+            [toolbar setContentView:view3 atIndex:0];
+            
+            [[[toolbar contentViewAtIndex:0] should] equal:view3];
+            [[theValue(toolbar.numberOfItems) should] equal:theValue(2)];
+        });
+        
+        it(@"should not set the new view at given index", ^(){
+            
+            UIView *view4 = [[UIView alloc] initWithFrame:CGRectZero];
+            [toolbar setContentView:view4 atIndex:2];
+            
+            [[[toolbar contentViewAtIndex:1] should] equal:view2];
+            [[theValue(toolbar.numberOfItems) should] equal:theValue(2)];
+        });
+    });
+});
 SPEC_END

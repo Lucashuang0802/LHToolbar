@@ -14,7 +14,8 @@ static CGFloat const colorToolbarHeight = 30.0f;
 static CGFloat const gap = 2.0f;
 
 @interface LHViewController ()
-
+@property (nonatomic) LHToolbar *toolbar;
+@property (nonatomic) LHToolbar *coolorToolbar;
 @end
 
 @implementation LHViewController
@@ -26,10 +27,10 @@ static CGFloat const gap = 2.0f;
 }
 
 - (void)addToolbar {
-    LHToolbar *toolbar = [[LHToolbar alloc] initWithNumberOfItems:4];
-    [toolbar setBackgroundColor:[UIColor redColor]];
+    self.toolbar = [[LHToolbar alloc] initWithNumberOfItems:4];
+    [self.toolbar setBackgroundColor:[UIColor redColor]];
     CGRect mainScreenBounds = [UIScreen mainScreen].bounds;
-    toolbar.frame = CGRectMake(0, CGRectGetHeight(mainScreenBounds) - toolbarHeight, CGRectGetWidth(mainScreenBounds), toolbarHeight);
+    self.toolbar.frame = CGRectMake(0, CGRectGetHeight(mainScreenBounds) - toolbarHeight, CGRectGetWidth(mainScreenBounds), toolbarHeight);
     
     UIButton *annotateButton = [[UIButton alloc] init];
     [annotateButton setImage:[UIImage imageNamed:@"annotate"] forState:UIControlStateNormal];
@@ -51,22 +52,22 @@ static CGFloat const gap = 2.0f;
     [eraseButton setBackgroundColor:[UIColor blackColor]];
     eraseButton.frame = CGRectMake(gap, gap, CGRectGetWidth(mainScreenBounds) / 4 - gap * 2, toolbarHeight - gap * 2);
 
-    [toolbar setContentView:annotateButton atIndex:0];
-    [toolbar setContentView:textButton atIndex:1];
-    [toolbar setContentView:screenshotButton atIndex:2];
-    [toolbar setContentView:eraseButton atIndex:3];
-    [self.view addSubview:toolbar];
+    [self.toolbar setContentView:annotateButton atIndex:0];
+    [self.toolbar setContentView:textButton atIndex:1];
+    [self.toolbar setContentView:screenshotButton atIndex:2];
+    [self.toolbar setContentView:eraseButton atIndex:3];
+    [self.view addSubview:self.toolbar];
 }
 
 - (void)addColorToolbar {
     
     // initialize tool bar
-    LHToolbar *toolbar = [[LHToolbar alloc] initWithNumberOfItems:9];
-    toolbar.backgroundColor = [UIColor lightGrayColor];
+    self.coolorToolbar = [[LHToolbar alloc] initWithNumberOfItems:9];
+    self.coolorToolbar.backgroundColor = [UIColor lightGrayColor];
     CGRect mainScreenBounds = [UIScreen mainScreen].bounds;
     CGFloat offset = 50.0f;
-    toolbar.frame = CGRectMake(offset / 2, CGRectGetHeight(mainScreenBounds) - toolbarHeight - colorToolbarHeight, CGRectGetWidth(mainScreenBounds) - offset, colorToolbarHeight);
-    [self.view addSubview:toolbar];
+    self.coolorToolbar.frame = CGRectMake(offset / 2, CGRectGetHeight(mainScreenBounds) - toolbarHeight - colorToolbarHeight, CGRectGetWidth(mainScreenBounds) - offset, colorToolbarHeight);
+    [self.view addSubview:self.coolorToolbar];
     
     // add color picker buttons
     NSDictionary *colorDict = @{
@@ -86,15 +87,34 @@ static CGFloat const gap = 2.0f;
         [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
         [button setFrame:CGRectMake(gap, gap, (CGRectGetWidth(mainScreenBounds) - offset) / 9.0 - gap * 2, colorToolbarHeight - gap * 2)];
         [button.layer setCornerRadius:colorToolbarHeight / 2.0f];
-        [toolbar setContentView:button atIndex:i -  1];
+        [self.coolorToolbar setContentView:button atIndex:i -  1];
     }
     
     // reload tool bar
-    [toolbar reloadToolbar];
+    [self.coolorToolbar reloadToolbar];
 }
 
 - (void)buttonPressed:(UIButton *)button {
     NSLog(@"%@ is pressed", button.description);
+}
+
+#pragma mark - IBAction
+- (IBAction)addItemToColorBarPressed:(id)sender {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [self.coolorToolbar insertContentView:button atIndex:2];
+}
+
+- (IBAction)removeItemToColorBarPressed:(id)sender {
+    [self.coolorToolbar removeContentViewAtIndex:2];
+}
+
+- (IBAction)addItemToToolBarPressed:(id)sender {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [self.toolbar insertContentView:button atIndex:3];
+}
+
+- (IBAction)removeItemToToolBarPressed:(id)sender {
+    [self.toolbar removeContentViewAtIndex:3];
 }
 
 @end

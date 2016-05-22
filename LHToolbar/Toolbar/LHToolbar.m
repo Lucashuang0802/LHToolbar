@@ -30,7 +30,7 @@
 }
 
 - (instancetype)initWithNumberOfItems:(NSInteger)numberOfItems {
-    if (numberOfItems <= 0) {
+    if (numberOfItems < 0) {
         return nil;
     }
     
@@ -63,14 +63,14 @@
 }
 
 - (void)setContentView:(UIView *)contentView atIndex:(NSInteger)index {
-    if (index >= self.numberOfItems) return;
+    if (!contentView || index < 0 || index >= self.numberOfItems) return;
     
     [self.containerView.contentViews setObject:contentView atIndexedSubscript:index];
 }
 
 - (UIView *)contentViewAtIndex:(NSInteger)index {
     
-    if (index >= self.numberOfItems) return nil;
+    if (index < 0 || index >= self.numberOfItems) return nil;
     
     id contentView = self.containerView.contentViews[index];
     if ([contentView isEqual:[NSNull null]]) {
@@ -80,13 +80,38 @@
 }
 
 - (NSInteger)indexOfContentView:(UIView *)contentView {
-    if (![self containedContentView:contentView]) return -1;
+    if (!contentView || ![self containedContentView:contentView]) return -1;
     return [self.containerView.contentViews indexOfObject:contentView];
 }
 
 - (BOOL)containedContentView:(UIView *)contentView {
     if (!contentView || [contentView isEqual:[NSNull null]]) return NO;
     return [self.containerView.contentViews containsObject:contentView];
+}
+
+- (void)addContentView:(UIView *)contentView {
+    [self insertContentView:contentView atIndex:self.containerView.contentViews.count];
+}
+
+- (void)insertContentView:(UIView *)contentView
+                  atIndex:(NSInteger)index {
+    
+    if (!contentView || index < 0 || self.containerView.contentViews.count < index) return;
+    
+    [self.containerView.contentViews insertObject:contentView atIndex:index];
+    self.numberOfItems += 1;
+}
+
+- (void)removeLastContentView {
+    [self removeContentViewAtIndex:self.containerView.contentViews.count - 1];
+}
+
+- (void)removeContentViewAtIndex:(NSInteger)index {
+
+    if (index < 0 || self.containerView.contentViews.count <= index) return;
+    
+    [self.containerView.contentViews removeObjectAtIndex:index];
+    self.numberOfItems -= 1;
 }
 
 #pragma mark - LHToolbarContainerViewDataSource

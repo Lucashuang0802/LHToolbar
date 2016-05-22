@@ -59,6 +59,8 @@ static CGFloat const gap = 2.0f;
 }
 
 - (void)addColorToolbar {
+    
+    // initialize tool bar
     LHToolbar *toolbar = [[LHToolbar alloc] initWithNumberOfItems:9];
     toolbar.backgroundColor = [UIColor lightGrayColor];
     CGRect mainScreenBounds = [UIScreen mainScreen].bounds;
@@ -66,6 +68,7 @@ static CGFloat const gap = 2.0f;
     toolbar.frame = CGRectMake(offset / 2, CGRectGetHeight(mainScreenBounds) - toolbarHeight - colorToolbarHeight, CGRectGetWidth(mainScreenBounds) - offset, colorToolbarHeight);
     [self.view addSubview:toolbar];
     
+    // add color picker buttons
     NSDictionary *colorDict = @{
                                 @1: [UIColor colorWithRed:68.0/255.0f green:140.0/255.0f blue:230.0/255.0f alpha:1.0],
                                 @2: [UIColor colorWithRed:179.0/255.0f green:0/255.0f blue:223.0/255.0f alpha:1.0],
@@ -79,12 +82,14 @@ static CGFloat const gap = 2.0f;
                                 };
     for (NSInteger i = 1; i < 10; i++) {
         UIButton *button = [[UIButton alloc] init];
-        button.backgroundColor = colorDict[@(i)];
+        [button setBackgroundColor:colorDict[@(i)]];
         [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
-        button.frame = CGRectMake(gap, gap, (CGRectGetWidth(mainScreenBounds) - offset) / 9.0 - gap * 2, colorToolbarHeight - gap * 2);
-        button.layer.cornerRadius = colorToolbarHeight / 2.0f;
+        [button setFrame:CGRectMake(gap, gap, (CGRectGetWidth(mainScreenBounds) - offset) / 9.0 - gap * 2, colorToolbarHeight - gap * 2)];
+        [button.layer setCornerRadius:colorToolbarHeight / 2.0f];
         [toolbar setContentView:button atIndex:i -  1];
     }
+    
+    // reload tool bar
     [toolbar reloadToolbar];
 }
 

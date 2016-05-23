@@ -70,6 +70,10 @@ pod "LHToolbar"
 
 Lucas Huang, xhuang0802@gmail.com
 
+## Contributing
+
+Please follow these sweet [contribution guidelines](https://github.com/Lucashuang0802/LHToolbar/blob/master/.github/CONTRIBUTING.md).
+
 ## License
 
 LHToolbar is available under the MIT license. See the LICENSE file for more info.

@@ -2,11 +2,6 @@ coverage:
   precision: 2
   round: nearest
   range: "60...100"
-  ignore:
-  - LHToolbarDemoCocoaPodsTest/*
-  - LHToolbarTests/*
-  - LHToolbarDemo/*
-  - Pods/*
         
 comment:
   layout: "header, diff, changes, sunburst, uncovered"

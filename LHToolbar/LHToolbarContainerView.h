@@ -17,4 +17,5 @@
 @property (weak, nonatomic) id<LHToolbarContainerViewDataSource> dataSource;
 @property (nonatomic) NSMutableArray<UIView *> *contentViews;
 - (void)reloadToolbarContainerView;
+- (void)reloadToolbarContainerViewAtIndex:(NSInteger)index;
 @end

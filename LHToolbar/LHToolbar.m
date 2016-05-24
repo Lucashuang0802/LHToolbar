@@ -62,6 +62,10 @@
     [self.containerView reloadToolbarContainerView];
 }
 
+- (void)reloadToolbarAtIndex:(NSInteger)index {
+    [self.containerView reloadToolbarContainerViewAtIndex:index];
+}
+
 - (void)setContentView:(UIView *)contentView atIndex:(NSInteger)index {
     if (!contentView || index < 0 || index >= self.numberOfItems) return;
     

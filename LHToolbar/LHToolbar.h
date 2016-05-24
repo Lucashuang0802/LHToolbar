@@ -16,6 +16,8 @@
 
 - (void)reloadToolbar;
 
+- (void)reloadToolbarAtIndex:(NSInteger)index;
+
 - (void)setContentView:(UIView *)contentView
                atIndex:(NSInteger)index;
 

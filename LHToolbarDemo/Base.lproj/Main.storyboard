@@ -45,6 +45,20 @@
                                     <action selector="removeItemToToolBarPressed:" destination="opn-Fk-rxg" eventType="touchUpInside" id="LzO-Uk-jhU"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A89-du-WfQ">
+                                <rect key="frame" x="226" y="218" width="148" height="30"/>
+                                <state key="normal" title="replaceItemToToolBar"/>
+                                <connections>
+                                    <action selector="replaceItemToToolBarPressed:" destination="opn-Fk-rxg" eventType="touchUpInside" id="gKo-BO-SgF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fex-84-jyv">
+                                <rect key="frame" x="221" y="180" width="157" height="30"/>
+                                <state key="normal" title="replaceItemToColorBar"/>
+                                <connections>
+                                    <action selector="replaceItemToColorBarPressed:" destination="opn-Fk-rxg" eventType="touchUpInside" id="l0g-hR-mRx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -52,10 +66,14 @@
                             <constraint firstItem="pGL-Ma-SHs" firstAttribute="top" secondItem="P1u-eV-JO2" secondAttribute="bottom" constant="8" id="5LE-ce-4fl"/>
                             <constraint firstItem="pGL-Ma-SHs" firstAttribute="centerX" secondItem="YhV-7q-hVR" secondAttribute="centerX" id="5gn-vv-FTq"/>
                             <constraint firstItem="G3M-W0-zqG" firstAttribute="centerX" secondItem="YhV-7q-hVR" secondAttribute="centerX" id="66o-Sk-jTx"/>
+                            <constraint firstItem="A89-du-WfQ" firstAttribute="centerX" secondItem="YhV-7q-hVR" secondAttribute="centerX" id="9kz-b8-JxA"/>
                             <constraint firstItem="Mgo-mi-jBf" firstAttribute="centerX" secondItem="YhV-7q-hVR" secondAttribute="centerX" id="BhL-fn-y3k"/>
+                            <constraint firstItem="A89-du-WfQ" firstAttribute="top" secondItem="fex-84-jyv" secondAttribute="bottom" constant="8" id="Cvo-di-Kwc"/>
                             <constraint firstItem="Mgo-mi-jBf" firstAttribute="top" secondItem="6zi-vX-bJT" secondAttribute="bottom" constant="8" id="GVu-Hs-Dfm"/>
                             <constraint firstItem="G3M-W0-zqG" firstAttribute="top" secondItem="Mgo-mi-jBf" secondAttribute="bottom" constant="8" id="VfL-2s-qAZ"/>
                             <constraint firstItem="6zi-vX-bJT" firstAttribute="centerX" secondItem="YhV-7q-hVR" secondAttribute="centerX" id="i1K-9i-Lmm"/>
+                            <constraint firstItem="fex-84-jyv" firstAttribute="centerX" secondItem="YhV-7q-hVR" secondAttribute="centerX" id="pRG-O2-X6U"/>
+                            <constraint firstItem="fex-84-jyv" firstAttribute="top" secondItem="G3M-W0-zqG" secondAttribute="bottom" constant="8" id="wro-g2-AqE"/>
                         </constraints>
                     </view>
                 </viewController>

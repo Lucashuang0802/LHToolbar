@@ -28,6 +28,18 @@
     [self reloadToolbarContainerView];
 }
 
+- (void)reloadToolbarContainerViewAtIndex:(NSInteger)index {
+    if (index < 0 || self.contentViews.count <= index) return;
+    if (!self.dataSource) return;
+    
+    UIView *contentView = self.contentViews[index];
+    if (![contentView isEqual:[NSNull null]]) {
+        UIView *view = self.subviews[index];
+        [view.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        [view addSubview:contentView];
+    }
+}
+
 - (void)reloadToolbarContainerView {
     if (!self.dataSource) return;
     

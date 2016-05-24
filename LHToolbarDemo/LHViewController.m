@@ -15,7 +15,7 @@ static CGFloat const gap = 2.0f;
 
 @interface LHViewController ()
 @property (nonatomic) LHToolbar *toolbar;
-@property (nonatomic) LHToolbar *coolorToolbar;
+@property (nonatomic) LHToolbar *colorToolbar;
 @end
 
 @implementation LHViewController
@@ -62,12 +62,12 @@ static CGFloat const gap = 2.0f;
 - (void)addColorToolbar {
     
     // initialize tool bar
-    self.coolorToolbar = [[LHToolbar alloc] initWithNumberOfItems:9];
-    self.coolorToolbar.backgroundColor = [UIColor lightGrayColor];
+    self.colorToolbar = [[LHToolbar alloc] initWithNumberOfItems:9];
+    self.colorToolbar.backgroundColor = [UIColor lightGrayColor];
     CGRect mainScreenBounds = [UIScreen mainScreen].bounds;
     CGFloat offset = 50.0f;
-    self.coolorToolbar.frame = CGRectMake(offset / 2, CGRectGetHeight(mainScreenBounds) - toolbarHeight - colorToolbarHeight, CGRectGetWidth(mainScreenBounds) - offset, colorToolbarHeight);
-    [self.view addSubview:self.coolorToolbar];
+    self.colorToolbar.frame = CGRectMake(offset / 2, CGRectGetHeight(mainScreenBounds) - toolbarHeight - colorToolbarHeight, CGRectGetWidth(mainScreenBounds) - offset, colorToolbarHeight);
+    [self.view addSubview:self.colorToolbar];
     
     // add color picker buttons
     NSDictionary *colorDict = @{
@@ -87,11 +87,11 @@ static CGFloat const gap = 2.0f;
         [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
         [button setFrame:CGRectMake(gap, gap, (CGRectGetWidth(mainScreenBounds) - offset) / 9.0 - gap * 2, colorToolbarHeight - gap * 2)];
         [button.layer setCornerRadius:colorToolbarHeight / 2.0f];
-        [self.coolorToolbar setContentView:button atIndex:i -  1];
+        [self.colorToolbar setContentView:button atIndex:i -  1];
     }
     
     // reload tool bar
-    [self.coolorToolbar reloadToolbar];
+    [self.colorToolbar reloadToolbar];
 }
 
 - (void)buttonPressed:(UIButton *)button {
@@ -101,11 +101,11 @@ static CGFloat const gap = 2.0f;
 #pragma mark - IBAction
 - (IBAction)addItemToColorBarPressed:(id)sender {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    [self.coolorToolbar insertContentView:button atIndex:2];
+    [self.colorToolbar insertContentView:button atIndex:2];
 }
 
 - (IBAction)removeItemToColorBarPressed:(id)sender {
-    [self.coolorToolbar removeContentViewAtIndex:2];
+    [self.colorToolbar removeContentViewAtIndex:2];
 }
 
 - (IBAction)addItemToToolBarPressed:(id)sender {
@@ -116,5 +116,18 @@ static CGFloat const gap = 2.0f;
 - (IBAction)removeItemToToolBarPressed:(id)sender {
     [self.toolbar removeContentViewAtIndex:3];
 }
+
+- (IBAction)replaceItemToColorBarPressed:(id)sender {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [self.colorToolbar setContentView:button atIndex:5];
+    [self.colorToolbar reloadToolbarAtIndex:5];
+}
+
+- (IBAction)replaceItemToToolBarPressed:(id)sender {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [self.toolbar setContentView:button atIndex:2];
+    [self.toolbar reloadToolbarAtIndex:2];
+}
+
 
 @end

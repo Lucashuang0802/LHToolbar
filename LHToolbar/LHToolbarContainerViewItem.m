@@ -79,7 +79,7 @@
 }
 
 - (instancetype)initWithPercentageOfScreenWidth:(CGFloat)percentageOfScreenWidth {
-    if (percentageOfScreenWidth <= 0) return nil;
+    if (percentageOfScreenWidth <= 0 || percentageOfScreenWidth > 1.0) return nil;
     
     if (self = [self initLHToolbarContainerViewItem]) {
         _percentageOfScreenWidth = percentageOfScreenWidth;
@@ -88,7 +88,7 @@
 }
 
 - (instancetype)initWithPercentageOfScreenHeight:(CGFloat)percentageOfScreenHeight {
-    if (percentageOfScreenHeight <= 0) return nil;
+    if (percentageOfScreenHeight <= 0 || percentageOfScreenHeight > 1.0) return nil;
     
     if (self = [self initLHToolbarContainerViewItem]) {
         _percentageOfScreenHeight = percentageOfScreenHeight;

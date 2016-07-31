@@ -17,7 +17,6 @@
 		A060AF031CF1A14000589311 /* LHToolbar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A060AEF91CF1A14000589311 /* LHToolbar.framework */; };
 		A060AF0E1CF1A14000589311 /* LHToolbar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A060AEF91CF1A14000589311 /* LHToolbar.framework */; };
 		A060AF0F1CF1A14000589311 /* LHToolbar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A060AEF91CF1A14000589311 /* LHToolbar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A060AF191CF1A18F00589311 /* LHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A060AF181CF1A18F00589311 /* LHViewController.m */; };
 		A060AF221CF1A1DE00589311 /* UIView+AutoLayoutHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = A060AF1B1CF1A1DE00589311 /* UIView+AutoLayoutHelper.h */; };
 		A060AF231CF1A1DE00589311 /* UIView+AutoLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A060AF1C1CF1A1DE00589311 /* UIView+AutoLayoutHelper.m */; };
 		A060AF241CF1A1DE00589311 /* LHToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A060AF1D1CF1A1DE00589311 /* LHToolbar.m */; };
@@ -29,6 +28,8 @@
 		A060AF2D1CF1A21A00589311 /* LHToolbarContainerViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A060AF2A1CF1A21A00589311 /* LHToolbarContainerViewTests.m */; };
 		A060AF2E1CF1A21A00589311 /* UIViewCategoriesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A060AF2B1CF1A21A00589311 /* UIViewCategoriesTests.m */; };
 		A060AF301CF1A22D00589311 /* LHToolbarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A060AF2F1CF1A22D00589311 /* LHToolbarTests.m */; };
+		A0D894401D4E853600863A14 /* LHHorizontalToolbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D8943F1D4E853600863A14 /* LHHorizontalToolbarViewController.m */; };
+		A0D894431D4E85BF00863A14 /* LHVerticalToolbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D894421D4E85BF00863A14 /* LHVerticalToolbarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,8 +85,6 @@
 		A060AEFD1CF1A14000589311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A060AF021CF1A14000589311 /* LHToolbarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LHToolbarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A060AF0B1CF1A14000589311 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A060AF171CF1A18F00589311 /* LHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHViewController.h; sourceTree = "<group>"; };
-		A060AF181CF1A18F00589311 /* LHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHViewController.m; sourceTree = "<group>"; };
 		A060AF1B1CF1A1DE00589311 /* UIView+AutoLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayoutHelper.h"; sourceTree = "<group>"; };
 		A060AF1C1CF1A1DE00589311 /* UIView+AutoLayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayoutHelper.m"; sourceTree = "<group>"; };
 		A060AF1D1CF1A1DE00589311 /* LHToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHToolbar.m; sourceTree = "<group>"; };
@@ -97,6 +96,10 @@
 		A060AF2A1CF1A21A00589311 /* LHToolbarContainerViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHToolbarContainerViewTests.m; sourceTree = "<group>"; };
 		A060AF2B1CF1A21A00589311 /* UIViewCategoriesTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewCategoriesTests.m; sourceTree = "<group>"; };
 		A060AF2F1CF1A22D00589311 /* LHToolbarTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHToolbarTests.m; sourceTree = "<group>"; };
+		A0D8943E1D4E853600863A14 /* LHHorizontalToolbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHHorizontalToolbarViewController.h; sourceTree = "<group>"; };
+		A0D8943F1D4E853600863A14 /* LHHorizontalToolbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHHorizontalToolbarViewController.m; sourceTree = "<group>"; };
+		A0D894411D4E85BF00863A14 /* LHVerticalToolbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LHVerticalToolbarViewController.h; sourceTree = "<group>"; };
+		A0D894421D4E85BF00863A14 /* LHVerticalToolbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LHVerticalToolbarViewController.m; sourceTree = "<group>"; };
 		B4D085B1DB1D79A940AB4302 /* Pods-LHToolbarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LHToolbarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LHToolbarTests/Pods-LHToolbarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA758ACB9E1B3198884C797C /* Pods_LHToolbarTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LHToolbarTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -174,8 +177,10 @@
 				A060AEE01CF1A12E00589311 /* LHAppDelegate.h */,
 				A060AEE11CF1A12E00589311 /* LHAppDelegate.m */,
 				A060AEE61CF1A12E00589311 /* Main.storyboard */,
-				A060AF171CF1A18F00589311 /* LHViewController.h */,
-				A060AF181CF1A18F00589311 /* LHViewController.m */,
+				A0D8943E1D4E853600863A14 /* LHHorizontalToolbarViewController.h */,
+				A0D8943F1D4E853600863A14 /* LHHorizontalToolbarViewController.m */,
+				A0D894411D4E85BF00863A14 /* LHVerticalToolbarViewController.h */,
+				A0D894421D4E85BF00863A14 /* LHVerticalToolbarViewController.m */,
 				A060AEE91CF1A12E00589311 /* Assets.xcassets */,
 				A060AEEB1CF1A12E00589311 /* LaunchScreen.storyboard */,
 				A060AEEE1CF1A12E00589311 /* Info.plist */,
@@ -425,9 +430,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0D894431D4E85BF00863A14 /* LHVerticalToolbarViewController.m in Sources */,
 				A060AEE21CF1A12E00589311 /* LHAppDelegate.m in Sources */,
 				A060AEDF1CF1A12E00589311 /* main.m in Sources */,
-				A060AF191CF1A18F00589311 /* LHViewController.m in Sources */,
+				A0D894401D4E853600863A14 /* LHHorizontalToolbarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

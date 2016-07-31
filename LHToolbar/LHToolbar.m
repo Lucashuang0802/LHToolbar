@@ -124,4 +124,9 @@
     return self.numberOfItems;
 }
 
+- (LHToolbarOrientation)orientationInContainerView:(LHToolbarContainerView *)containerView {
+    
+    return self.orientation;
+}
+
 @end

@@ -1,14 +1,95 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="opn-Fk-rxg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="egz-Cg-Alm">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Root View Controller-->
+        <scene sceneID="aIN-4X-1wa">
+            <objects>
+                <tableViewController id="fhl-hT-bvM" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="rzT-j1-DpW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="wbp-bg-INC">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="nqs-ZC-E8H" style="IBUITableViewCellStyleDefault" id="azD-eX-7yI">
+                                        <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="azD-eX-7yI" id="Th3-B8-eWa">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Horizontal Toolbar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nqs-ZC-E8H">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="opn-Fk-rxg" kind="show" id="qMi-sw-CdL"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="83P-t5-QbM" style="IBUITableViewCellStyleDefault" id="Y15-vR-C6e">
+                                        <rect key="frame" x="0.0" y="108" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y15-vR-C6e" id="VzC-Mm-fQj">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Vertical Toolbar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="83P-t5-QbM">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="jlv-xs-OVQ" kind="show" id="9b7-tz-KXP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="fhl-hT-bvM" id="BNp-gK-DQz"/>
+                            <outlet property="delegate" destination="fhl-hT-bvM" id="qGe-aK-b0U"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="v80-ug-PkT"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k4p-8X-cX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-269" y="460"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0dp-yn-e1w">
+            <objects>
+                <navigationController id="egz-Cg-Alm" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mf6-Pd-Ylw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="fhl-hT-bvM" kind="relationship" relationship="rootViewController" id="VbS-85-PBl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y96-Or-xXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-899" y="460"/>
+        </scene>
+        <!--Horizontal Toolbar View Controller-->
         <scene sceneID="EJT-Op-tbs">
             <objects>
-                <viewController id="opn-Fk-rxg" customClass="LHViewController" sceneMemberID="viewController">
+                <viewController id="opn-Fk-rxg" customClass="LHHorizontalToolbarViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P1u-eV-JO2"/>
                         <viewControllerLayoutGuide type="bottom" id="uKD-Nv-1Lf"/>
@@ -17,69 +98,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGL-Ma-SHs">
-                                <rect key="frame" x="234" y="28" width="132" height="30"/>
-                                <state key="normal" title="addItemToColorBar"/>
-                                <connections>
-                                    <action selector="addItemToColorBarPressed:" destination="opn-Fk-rxg" eventType="touchUpInside" id="KHv-ay-YaJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgo-mi-jBf">
-                                <rect key="frame" x="238.5" y="104" width="123" height="30"/>
-                                <state key="normal" title="addItemToToolBar"/>
-                                <connections>
-                                    <action selector="addItemToToolBarPressed:" destination="opn-Fk-rxg" eventType="touchUpInside" id="v12-KJ-AgZ"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6zi-vX-bJT">
-                                <rect key="frame" x="221.5" y="66" width="157" height="30"/>
+                                <rect key="frame" x="222" y="110" width="157" height="30"/>
                                 <state key="normal" title="removeItemToColorBar"/>
                                 <connections>
                                     <action selector="removeItemToColorBarPressed:" destination="opn-Fk-rxg" eventType="touchUpInside" id="abW-0J-mYa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3M-W0-zqG">
-                                <rect key="frame" x="226.5" y="142" width="148" height="30"/>
-                                <state key="normal" title="removeItemToToolBar"/>
-                                <connections>
-                                    <action selector="removeItemToToolBarPressed:" destination="opn-Fk-rxg" eventType="touchUpInside" id="LzO-Uk-jhU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A89-du-WfQ">
-                                <rect key="frame" x="226" y="218" width="148" height="30"/>
-                                <state key="normal" title="replaceItemToToolBar"/>
-                                <connections>
-                                    <action selector="replaceItemToToolBarPressed:" destination="opn-Fk-rxg" eventType="touchUpInside" id="gKo-BO-SgF"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fex-84-jyv">
-                                <rect key="frame" x="221" y="180" width="157" height="30"/>
+                                <rect key="frame" x="222" y="148" width="157" height="30"/>
                                 <state key="normal" title="replaceItemToColorBar"/>
                                 <connections>
                                     <action selector="replaceItemToColorBarPressed:" destination="opn-Fk-rxg" eventType="touchUpInside" id="l0g-hR-mRx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGL-Ma-SHs">
+                                <rect key="frame" x="234" y="72" width="132" height="30"/>
+                                <state key="normal" title="addItemToColorBar"/>
+                                <connections>
+                                    <action selector="addItemToColorBarPressed:" destination="opn-Fk-rxg" eventType="touchUpInside" id="KHv-ay-YaJ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6zi-vX-bJT" firstAttribute="top" secondItem="pGL-Ma-SHs" secondAttribute="bottom" constant="8" id="4oU-8S-HNY"/>
-                            <constraint firstItem="pGL-Ma-SHs" firstAttribute="top" secondItem="P1u-eV-JO2" secondAttribute="bottom" constant="8" id="5LE-ce-4fl"/>
                             <constraint firstItem="pGL-Ma-SHs" firstAttribute="centerX" secondItem="YhV-7q-hVR" secondAttribute="centerX" id="5gn-vv-FTq"/>
-                            <constraint firstItem="G3M-W0-zqG" firstAttribute="centerX" secondItem="YhV-7q-hVR" secondAttribute="centerX" id="66o-Sk-jTx"/>
-                            <constraint firstItem="A89-du-WfQ" firstAttribute="centerX" secondItem="YhV-7q-hVR" secondAttribute="centerX" id="9kz-b8-JxA"/>
-                            <constraint firstItem="Mgo-mi-jBf" firstAttribute="centerX" secondItem="YhV-7q-hVR" secondAttribute="centerX" id="BhL-fn-y3k"/>
-                            <constraint firstItem="A89-du-WfQ" firstAttribute="top" secondItem="fex-84-jyv" secondAttribute="bottom" constant="8" id="Cvo-di-Kwc"/>
-                            <constraint firstItem="Mgo-mi-jBf" firstAttribute="top" secondItem="6zi-vX-bJT" secondAttribute="bottom" constant="8" id="GVu-Hs-Dfm"/>
-                            <constraint firstItem="G3M-W0-zqG" firstAttribute="top" secondItem="Mgo-mi-jBf" secondAttribute="bottom" constant="8" id="VfL-2s-qAZ"/>
+                            <constraint firstItem="fex-84-jyv" firstAttribute="top" secondItem="6zi-vX-bJT" secondAttribute="bottom" constant="8" id="ENA-n6-02V"/>
                             <constraint firstItem="6zi-vX-bJT" firstAttribute="centerX" secondItem="YhV-7q-hVR" secondAttribute="centerX" id="i1K-9i-Lmm"/>
+                            <constraint firstItem="pGL-Ma-SHs" firstAttribute="top" secondItem="P1u-eV-JO2" secondAttribute="bottom" constant="8" id="mal-zw-i5m"/>
                             <constraint firstItem="fex-84-jyv" firstAttribute="centerX" secondItem="YhV-7q-hVR" secondAttribute="centerX" id="pRG-O2-X6U"/>
-                            <constraint firstItem="fex-84-jyv" firstAttribute="top" secondItem="G3M-W0-zqG" secondAttribute="bottom" constant="8" id="wro-g2-AqE"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CeC-OD-DYe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="433"/>
+            <point key="canvasLocation" x="496" y="386"/>
+        </scene>
+        <!--Vertical Toolbar View Controller-->
+        <scene sceneID="Wet-n0-SsS">
+            <objects>
+                <viewController id="jlv-xs-OVQ" customClass="LHVerticalToolbarViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BgI-oD-uSH"/>
+                        <viewControllerLayoutGuide type="bottom" id="GIV-IC-APe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="65G-v8-Urh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FaT-vp-MMp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="496" y="1086"/>
         </scene>
     </scenes>
 </document>

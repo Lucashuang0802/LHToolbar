@@ -6,11 +6,12 @@
 //
 //
 
-#import <UIKit/UIKit.h>
+#import "LHToolbar.h"
 
 @class LHToolbarContainerView;
 @protocol LHToolbarContainerViewDataSource <NSObject>
 - (NSInteger)numberOfItemInContainerView:(LHToolbarContainerView *)containerView;
+- (LHToolbarOrientation)orientationInContainerView:(LHToolbarContainerView *)containerView;
 @end
 
 @interface LHToolbarContainerView : UIView

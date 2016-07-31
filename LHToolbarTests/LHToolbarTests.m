@@ -43,6 +43,31 @@ context(@"Initialization of LHToolbar", ^(){
 });
 SPEC_END
 
+SPEC_BEGIN(InitialLHToolbarOrientationTests)
+context(@"Initialization of LHToolbar", ^(){
+    describe(@"An instance of LHToolbar", ^(){
+        it(@"should initialize with default horizontal orientation", ^(){
+            
+            LHToolbar *toolbar = [[LHToolbar alloc] init];
+            [[theValue(toolbar.orientation) should] equal:theValue(LHToolbarOrientationHorizontal)];
+        });
+        
+        it(@"should initialize with given horizontal orientation", ^(){
+            
+            LHToolbar *toolbar = [[LHToolbar alloc] init];
+            [[theValue(toolbar.orientation) should] equal:theValue(LHToolbarOrientationHorizontal)];
+        });
+        
+        it(@"should initialize with given vertical orientation", ^(){
+            
+            LHToolbar *toolbar = [[LHToolbar alloc] init];
+            toolbar.orientation = LHToolbarOrientationVertical;
+            [[theValue(toolbar.orientation) should] equal:theValue(LHToolbarOrientationVertical)];
+        });
+    });
+});
+SPEC_END
+
 SPEC_BEGIN(AccessingContentViewToolbarTests)
 context(@"Accessing content view in LHToolbar", ^(){
     

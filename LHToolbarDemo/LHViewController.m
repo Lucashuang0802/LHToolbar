@@ -10,7 +10,8 @@
 #import "LHToolbar.h"
 
 static CGFloat const toolbarHeight = 50.0f;
-static CGFloat const colorToolbarHeight = 30.0f;
+static CGFloat const toolbarWidth = 44.0f;
+static CGFloat const colorToolbarHeight = 38.0f;
 static CGFloat const gap = 2.0f;
 
 @interface LHViewController ()
@@ -28,9 +29,10 @@ static CGFloat const gap = 2.0f;
 
 - (void)addToolbar {
     self.toolbar = [[LHToolbar alloc] initWithNumberOfItems:4];
+    self.toolbar.orientation = LHToolbarOrientationVertical;
     [self.toolbar setBackgroundColor:[UIColor redColor]];
     CGRect mainScreenBounds = [UIScreen mainScreen].bounds;
-    self.toolbar.frame = CGRectMake(0, CGRectGetHeight(mainScreenBounds) - toolbarHeight, CGRectGetWidth(mainScreenBounds), toolbarHeight);
+    self.toolbar.frame = CGRectMake(0, CGRectGetWidth(mainScreenBounds) / 4, CGRectGetWidth(mainScreenBounds) / 4, CGRectGetHeight(mainScreenBounds) - CGRectGetWidth(mainScreenBounds) / 2);
     
     UIButton *annotateButton = [[UIButton alloc] init];
     [annotateButton setImage:[UIImage imageNamed:@"annotate"] forState:UIControlStateNormal];

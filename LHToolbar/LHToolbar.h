@@ -10,6 +10,13 @@
 
 @interface LHToolbar : UIView
 
+typedef NS_ENUM(NSUInteger, LHToolbarOrientation) {
+    LHToolbarOrientationHorizontal = 0,
+    LHToolbarOrientationVertical
+};
+
+@property (nonatomic) LHToolbarOrientation orientation;
+
 @property (readonly, nonatomic) NSInteger numberOfItems;
 
 - (instancetype)initWithNumberOfItems:(NSInteger)numberOfItems;

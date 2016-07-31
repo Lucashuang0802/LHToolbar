@@ -8,6 +8,7 @@
 
 #import "LHToolbarContainerView.h"
 #import "LHToolbarContainerViewItem.h"
+#import "LHToolbar.h"
 #import "UIView+AutoLayoutHelper.h"
 
 @implementation LHToolbarContainerView
@@ -53,9 +54,21 @@
     
     NSInteger i = 1;
     while (i <= numberOfContainerView) {
-        LHToolbarContainerViewItem *item = [[LHToolbarContainerViewItem alloc] initWithPercentageOfScreenWidth:1.0 / numberOfContainerView];
+        
+        LHToolbarOrientation orientation = [self.dataSource orientationInContainerView:self];
+        LHToolbarContainerViewItem *item;
+        if (orientation == LHToolbarOrientationHorizontal) {
+            item = [[LHToolbarContainerViewItem alloc] initWithPercentageOfScreenWidth:1.0 / numberOfContainerView];
+        }
+        else {
+            item = [[LHToolbarContainerViewItem alloc] initWithPercentageOfScreenHeight:1.0 / numberOfContainerView];
+        }
         [self addSubview:item];
         i++;
+    }
+    
+    if (!self.subviews.count) {
+        return;
     }
     
     for (NSInteger i = 0; i < self.contentViews.count; i++) {
